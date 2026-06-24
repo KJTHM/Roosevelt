@@ -426,7 +426,7 @@ p { margin: 0 0 1.1em; }
   padding: clamp(3rem, 7vw, 5rem) 0 clamp(2.5rem, 5vw, 3.5rem);
   border-bottom: 1px solid var(--line);
 }
-.page-hero h1 { margin-bottom: 0.6rem; max-width: 22ch; }
+.page-hero h1 { margin-bottom: 0.6rem; max-width: 28ch; }
 .page-hero p { max-width: 60ch; }
 
 /* ---- CTA band ---- */
