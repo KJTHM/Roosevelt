@@ -1,0 +1,840 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roosevelt Academy - A nonprofit day school for children of all abilities</title>
+  <meta name="description" content="Roosevelt Academy is a nonprofit day school for children ages 2-22 with special needs and disabilities. Individualized education and on-site therapy, in a place where every child is seen, safe, and celebrated." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>/* =========================================================================
+   Bright Harbor Foundation - shared stylesheet
+   Visual identity: warm, safe, hopeful. Soft blues, warm whites, gentle greens.
+   Type: Fraunces (soft serif, headings) + Nunito Sans (friendly body).
+   ========================================================================= */
+
+/* ---- Design tokens ---- */
+:root {
+  /* Core palette */
+  --harbor-blue:    #3f7ca6;   /* primary - calm, trustworthy */
+  --harbor-blue-dk: #2e5e80;   /* hover / depth */
+  --harbor-blue-lt: #e8f1f7;   /* soft wash background */
+  --sage:           #6fa988;   /* gentle green - growth, reassurance */
+  --sage-dk:        #4f8568;
+  --sage-lt:        #eaf3ee;
+  --apricot:        #e6a169;   /* warm accent - human, hopeful */
+  --apricot-dk:     #d18a4f;
+  --apricot-lt:     #fbeede;
+
+  /* Neutrals - warm, never stark */
+  --cream:          #fcf9f4;   /* page background */
+  --cream-2:        #f6f1e8;   /* alt section background */
+  --white:          #ffffff;
+  --ink:            #34434d;   /* body text - soft charcoal, not black */
+  --ink-soft:       #5d6b73;   /* secondary text */
+  --line:           #ece4d7;   /* hairlines / borders */
+
+  /* Type */
+  --font-head: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Shape & depth */
+  --radius:    18px;
+  --radius-sm: 12px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 2px 10px rgba(46, 94, 128, 0.06);
+  --shadow:    0 12px 32px rgba(46, 94, 128, 0.10);
+  --shadow-lg: 0 24px 60px rgba(46, 94, 128, 0.14);
+
+  --maxw: 1140px;
+  --gap:  clamp(1.5rem, 4vw, 3rem);
+}
+
+/* ---- Reset & base ---- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.075rem;
+  line-height: 1.7;
+  color: var(--ink);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--harbor-blue-dk); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-head);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--ink);
+  margin: 0 0 0.5em;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: clamp(2.3rem, 5.2vw, 3.6rem); }
+h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); }
+h3 { font-size: clamp(1.25rem, 2.2vw, 1.55rem); }
+
+p { margin: 0 0 1.1em; }
+
+/* ---- Layout helpers ---- */
+.wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 1.5rem; }
+
+.section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
+.section--tint  { background: var(--cream-2); }
+.section--blue  { background: var(--harbor-blue-lt); }
+.section--sage  { background: var(--sage-lt); }
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sage-dk);
+  margin-bottom: 0.9rem;
+}
+
+.lead { font-size: 1.2rem; color: var(--ink-soft); }
+
+.center  { text-align: center; }
+.measure { max-width: 62ch; }
+.measure.center { margin-left: auto; margin-right: auto; }
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.95rem 1.6rem;
+  border-radius: var(--radius-pill);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  text-decoration: none;
+}
+.btn:hover { text-decoration: none; transform: translateY(-2px); }
+.btn:focus-visible { outline: 3px solid var(--apricot); outline-offset: 3px; }
+
+.btn--primary { background: var(--harbor-blue); color: #fff; box-shadow: var(--shadow-sm); }
+.btn--primary:hover { background: var(--harbor-blue-dk); box-shadow: var(--shadow); }
+
+.btn--warm { background: var(--apricot); color: #44301c; box-shadow: var(--shadow-sm); }
+.btn--warm:hover { background: var(--apricot-dk); color: #3a2715; box-shadow: var(--shadow); }
+
+.btn--ghost { background: transparent; color: var(--harbor-blue-dk); border-color: var(--harbor-blue); }
+.btn--ghost:hover { background: var(--harbor-blue); color: #fff; }
+
+.btn--lg { padding: 1.1rem 2rem; font-size: 1.08rem; }
+.btn--block { width: 100%; justify-content: center; }
+
+/* ---- Header / nav ---- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(252, 249, 244, 0.88);
+  backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1.5rem;
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+.brand { display: inline-flex; align-items: center; gap: 0.65rem; }
+.brand:hover { text-decoration: none; }
+.brand__mark { width: 40px; height: 40px; flex: 0 0 auto; }
+
+/* Logo placeholder - swap for the school's real logo <img> when ready */
+.brand__logo-slot {
+  width: 46px; height: 46px; flex: 0 0 auto;
+  display: grid; place-items: center; text-align: center;
+  border: 2px dashed var(--harbor-blue);
+  border-radius: 12px;
+  background: var(--harbor-blue-lt);
+  color: var(--harbor-blue-dk);
+  font-family: var(--font-body);
+  font-weight: 800; font-size: 0.52rem; letter-spacing: 0.06em; line-height: 1.1;
+}
+.footer__brand .brand__logo-slot {
+  border-color: rgba(255,255,255,0.45);
+  background: rgba(255,255,255,0.06);
+  color: #cfe3f0;
+}
+.brand__name {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--ink);
+  line-height: 1.05;
+}
+.brand__name span { display: block; font-family: var(--font-body); font-weight: 700; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage-dk); }
+
+.nav__links { display: flex; align-items: center; gap: 0.4rem; list-style: none; margin: 0; padding: 0; }
+.nav__links a {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: var(--ink);
+}
+.nav__links a:hover { background: var(--harbor-blue-lt); text-decoration: none; }
+.nav__links a[aria-current="page"] { color: var(--harbor-blue-dk); background: transparent; border-bottom: 2px solid var(--harbor-blue); border-radius: 0; padding-bottom: calc(0.5rem - 2px); }
+.nav__cta { margin-left: 0.4rem; }
+
+.nav__toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.6rem;
+  cursor: pointer;
+  color: var(--ink);
+}
+.nav__toggle svg { display: block; }
+
+/* ---- Hero ---- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(1200px 520px at 78% -8%, var(--sage-lt) 0%, transparent 60%),
+    radial-gradient(900px 480px at 8% 6%, var(--harbor-blue-lt) 0%, transparent 55%),
+    var(--cream);
+}
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+  padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(3.5rem, 8vw, 6rem);
+}
+.hero h1 { margin-bottom: 0.4rem; }
+.hero__mission {
+  font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+  color: var(--ink-soft);
+  max-width: 46ch;
+  margin-bottom: 1.8rem;
+}
+.hero__ctas { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-bottom: 1.3rem; }
+.hero__assure {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 0.95rem; color: var(--ink-soft); font-weight: 700;
+}
+.hero__assure svg { color: var(--sage-dk); flex: 0 0 auto; }
+
+/* Hero illustration card */
+.hero__art {
+  position: relative;
+  border-radius: 28px;
+  background: linear-gradient(160deg, #fff, var(--harbor-blue-lt));
+  box-shadow: var(--shadow-lg);
+  padding: 1.5rem;
+  aspect-ratio: 4 / 3.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero__art svg { width: 100%; height: auto; }
+
+/* ---- Generic cards & grids ---- */
+.grid { display: grid; gap: 1.5rem; }
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.7rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.18s ease, box-shadow 0.22s ease;
+}
+.card:hover { transform: none; box-shadow: var(--shadow); border-color: var(--harbor-blue-lt); }
+.card h3 { margin-bottom: 0.4rem; }
+.card p:last-child { margin-bottom: 0; }
+
+.icon-badge {
+  width: 44px; height: 44px;
+  border-radius: 0;
+  display: grid; place-items: center;
+  margin-bottom: 1.1rem;
+  background: transparent;
+}
+.icon-badge--blue { color: var(--harbor-blue); }
+.icon-badge--sage { color: var(--sage-dk); }
+.icon-badge--apricot { color: var(--apricot-dk); }
+
+/* ---- Stats row ---- */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; text-align: center; }
+.stat__num { font-family: var(--font-head); font-weight: 600; font-size: clamp(2rem, 4vw, 2.8rem); color: var(--harbor-blue-dk); line-height: 1; }
+.stat__label { font-weight: 700; color: var(--ink-soft); font-size: 0.98rem; }
+
+/* ---- Feature split ---- */
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+.split__panel {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+/* Quote / pull */
+.quote {
+  font-family: var(--font-head);
+  font-size: clamp(1.4rem, 2.8vw, 2rem);
+  line-height: 1.35;
+  color: var(--ink);
+  font-weight: 500;
+  border-left: 4px solid var(--apricot);
+  padding-left: 1.5rem;
+  margin-left: 0;
+}
+.quote::before { content: “”; }
+.quote::after  { content: “”; }
+
+/* ---- Trust strip ---- */
+.trust-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.9rem; }
+.trust-list li { display: flex; gap: 0.75rem; align-items: flex-start; }
+.trust-list svg { color: var(--sage-dk); flex: 0 0 auto; margin-top: 3px; }
+
+/* ---- Team cards ---- */
+.team-card { text-align: center; }
+.team-card .avatar {
+  width: 96px; height: 96px; border-radius: 50%;
+  margin: 0 auto 1rem;
+  display: grid; place-items: center;
+  font-family: var(--font-head);
+  font-weight: 600; font-size: 2rem; color: #fff;
+}
+.team-card .role { font-weight: 800; color: var(--harbor-blue-dk); font-size: 0.92rem; letter-spacing: 0.02em; }
+.team-card .bio { color: var(--ink-soft); font-size: 0.98rem; }
+
+/* ---- Program list ---- */
+.program {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 1.3rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--harbor-blue);
+  border-radius: var(--radius);
+  padding: 1.6rem 1.8rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.18s ease, box-shadow 0.22s ease;
+}
+.program:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.program:nth-child(3n+2) { border-left-color: var(--sage); }
+.program:nth-child(3n+3) { border-left-color: var(--apricot); }
+.program__icon { width: 44px; height: 44px; border-radius: 0; display: grid; place-items: center; color: var(--harbor-blue); background: transparent; }
+.program:nth-child(3n+2) .program__icon { color: var(--sage-dk); background: transparent; }
+.program:nth-child(3n+3) .program__icon { color: var(--apricot-dk); background: transparent; }
+.program__who {
+  display: inline-block;
+  font-size: 0.82rem; font-weight: 800; letter-spacing: 0.04em;
+  color: var(--sage-dk);
+  background: var(--sage-lt);
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 0.6rem;
+}
+.program h3 { margin-bottom: 0.5rem; }
+.program p:last-child { margin-bottom: 0; }
+
+/* ---- Donation page ---- */
+.goal {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: clamp(1.6rem, 3vw, 2.4rem);
+}
+.goal__row { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.8rem; }
+.goal__raised { font-family: var(--font-head); font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 600; color: var(--sage-dk); }
+.goal__target { color: var(--ink-soft); font-weight: 700; }
+.progress {
+  height: 18px; background: var(--cream-2);
+  border-radius: var(--radius-pill); overflow: hidden;
+  border: 1px solid var(--line);
+}
+.progress__bar {
+  height: 100%;
+  width: 0;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(90deg, var(--sage), var(--harbor-blue));
+  transition: width 1.4s cubic-bezier(.22,1,.36,1);
+}
+.goal__meta { margin-top: 0.7rem; color: var(--ink-soft); font-weight: 700; font-size: 0.95rem; }
+
+.tier {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.6rem;
+  box-shadow: var(--shadow-sm);
+  display: flex; flex-direction: column; gap: 0.4rem;
+  transition: transform 0.18s ease, box-shadow 0.22s ease, border-color 0.2s ease;
+}
+.tier:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--harbor-blue); }
+.tier__amt { font-family: var(--font-head); font-size: 2rem; font-weight: 600; color: var(--harbor-blue-dk); }
+.tier__funds { font-weight: 800; color: var(--ink); }
+.tier__desc { color: var(--ink-soft); font-size: 0.97rem; }
+
+.amount-picker { display: flex; flex-wrap: wrap; gap: 0.7rem; margin: 1.2rem 0; }
+.amount-picker button {
+  font-family: var(--font-body); font-weight: 800; font-size: 1.05rem;
+  padding: 0.8rem 1.3rem;
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--line);
+  background: var(--white); color: var(--ink);
+  cursor: pointer; transition: all 0.15s ease;
+}
+.amount-picker button:hover { border-color: var(--harbor-blue); }
+.amount-picker button.is-active { background: var(--harbor-blue); border-color: var(--harbor-blue); color: #fff; }
+
+.privacy-note {
+  display: flex; gap: 0.7rem; align-items: flex-start;
+  background: var(--sage-lt);
+  border: 1px solid #d6e7dc;
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.1rem;
+  color: var(--ink);
+  font-size: 0.97rem;
+}
+.privacy-note svg { color: var(--sage-dk); flex: 0 0 auto; margin-top: 2px; }
+.privacy-note strong { color: var(--sage-dk); }
+
+/* ---- Page hero (interior pages) ---- */
+.page-hero {
+  background:
+    radial-gradient(800px 360px at 85% -20%, var(--sage-lt) 0%, transparent 60%),
+    radial-gradient(700px 340px at 0% 0%, var(--harbor-blue-lt) 0%, transparent 55%),
+    var(--cream);
+  padding: clamp(3rem, 7vw, 5rem) 0 clamp(2.5rem, 5vw, 3.5rem);
+  border-bottom: 1px solid var(--line);
+}
+.page-hero p { max-width: 60ch; }
+
+/* ---- CTA band ---- */
+.cta-band {
+  background: var(--ink);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: clamp(2.2rem, 5vw, 3.5rem);
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+.cta-band h2 { color: #fff; }
+.cta-band p { color: #c8d1d6; max-width: 56ch; margin-left: auto; margin-right: auto; }
+.cta-band .btn--ghost { color: #fff; border-color: rgba(255,255,255,0.5); }
+.cta-band .btn--ghost:hover { background: #fff; color: var(--ink); }
+
+/* ---- Footer ---- */
+.site-footer {
+  background: #2b3a43;
+  color: #d6dde1;
+  padding: clamp(2.5rem, 5vw, 3.5rem) 0 1.5rem;
+}
+.site-footer a { color: #cfe3f0; }
+.footer__grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 2rem; }
+.footer__brand .brand__name { color: #fff; }
+.footer__brand p { color: #aeb9bf; font-size: 0.96rem; max-width: 32ch; }
+.footer h4 { color: #fff; font-family: var(--font-body); font-weight: 800; font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.9rem; }
+.footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.55rem; }
+.footer ul a { font-weight: 600; }
+.footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.12);
+  margin-top: 2.5rem; padding-top: 1.3rem;
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.6rem;
+  color: #9aa6ad; font-size: 0.9rem;
+}
+
+/* ---- Utilities ---- */
+.mt-0 { margin-top: 0; }
+.mb-0 { margin-bottom: 0; }
+.stack > * + * { margin-top: 1.1rem; }
+.section-head { max-width: 60ch; margin-bottom: 2.5rem; }
+.section-head.center { margin-left: auto; margin-right: auto; }
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .hero__inner { grid-template-columns: 1fr; }
+  .hero__art { order: -1; max-width: 460px; margin: 0 auto; width: 100%; }
+  .split { grid-template-columns: 1fr; }
+  .grid--4 { grid-template-columns: repeat(2, 1fr); }
+  .stats { grid-template-columns: repeat(2, 1fr); gap: 2rem 1rem; }
+  .footer__grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 680px) {
+  body { font-size: 1.02rem; }
+  .nav__links {
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.25rem;
+    background: var(--cream);
+    border-bottom: 1px solid var(--line);
+    padding: 0.8rem 1.2rem 1.2rem;
+    box-shadow: var(--shadow);
+    display: none;
+  }
+  .nav__links.is-open { display: flex; }
+  .nav__links a { padding: 0.7rem 0.9rem; }
+  .nav__cta { margin-left: 0; }
+  .nav__toggle { display: inline-flex; }
+  .grid--2, .grid--3, .grid--4 { grid-template-columns: 1fr; }
+  .program { grid-template-columns: 1fr; }
+  .program__icon { width: 50px; height: 50px; }
+  .footer__grid { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}
+</style>
+</head>
+<body>
+
+  <!-- ===== Header / Navigation ===== -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <!-- INSERT SCHOOL LOGO HERE - replace this <span> with: <img class="brand__mark" src="assets/logo.svg" alt="Roosevelt Academy"> -->
+        <span class="brand__logo-slot" aria-hidden="true">LOGO</span>
+        <span class="brand__name">Roosevelt Academy<span></span></span>
+      </a>
+
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="who-we-are.html">Who We Are</a></li>
+        <li><a href="programs.html">Programs &amp; Services</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li class="nav__cta"><a class="btn btn--warm" href="programs.html#admissions">Schedule a Tour</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="wrap hero__inner">
+        <div class="hero__copy">
+          <span class="eyebrow">A day school for children of all abilities</span>
+          <h1>Every child deserves a safe harbor to learn.</h1>
+          <p class="hero__mission">
+            Roosevelt Academy is a nonprofit day school for children ages 2 to 22 with special
+            needs and disabilities. We pair individualized learning with on-site therapy so
+            every student is taught the way they learn best, in a place where they're
+            seen, safe, and celebrated.
+          </p>
+          <div class="hero__ctas">
+            <a class="btn btn--warm btn--lg" href="programs.html#admissions">Schedule a tour</a>
+            <a class="btn btn--primary btn--lg" href="donate.html">Donate today</a>
+          </div>
+          <span class="hero__assure">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="M9 12l2 2 4-4"/></svg>
+            Your child's information is always kept private and secure.
+          </span>
+        </div>
+
+        <div class="hero__art">
+          <!-- Warm, abstract illustration: a sheltering hand around a child beneath the sun -->
+          <svg viewBox="0 0 420 360" role="img" aria-label="A protective hand sheltering a child beneath a warm sun" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#eaf3ee"/>
+                <stop offset="1" stop-color="#e8f1f7"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="420" height="360" rx="22" fill="url(#sky)"/>
+            <circle cx="312" cy="92" r="46" fill="#f4d09a"/>
+            <circle cx="312" cy="92" r="46" fill="#e6a169" opacity="0.25"/>
+            <!-- gentle hills -->
+            <path d="M0 300c70-34 150-34 220 0s140 30 200 4v56H0Z" fill="#cfe6d8"/>
+            <path d="M0 322c80-22 160-18 230 6s130 20 190-2v34H0Z" fill="#a9d3ba"/>
+            <!-- sheltering hand -->
+            <path d="M96 236c-18-30-26-78-10-110 8-15 26-12 26 6 0-22 4-44 20-44s16 26 16 44c2-18 6-34 22-32s12 30 10 46c6-14 18-22 28-12 9 9-2 28-10 44-9 18-20 44-44 58-30 17-72 18-88 0Z" fill="#f6c9a0"/>
+            <path d="M96 236c-18-30-26-78-10-110 8-15 26-12 26 6" fill="none" stroke="#e6a169" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+            <!-- child figure resting in the hand -->
+            <circle cx="150" cy="180" r="22" fill="#3f7ca6"/>
+            <path d="M120 244c0-22 14-38 30-38s30 16 30 38Z" fill="#3f7ca6"/>
+            <circle cx="150" cy="180" r="22" fill="#fff" opacity="0.12"/>
+            <!-- little heart -->
+            <path d="M300 196c-6-6-16-2-16 7 0 7 16 17 16 17s16-10 16-17c0-9-10-13-16-7Z" fill="#6fa988"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Emotional hook / mission statement ===== -->
+    <section class="section">
+      <div class="wrap center">
+        <p class="quote measure center">
+          You don't have to have it all figured out. You just have to find the right place
+          for your child to learn. You don't have to find it alone.
+        </p>
+        <p class="lead measure center" style="margin-top:1.4rem;">
+          We exist for the parent who is tired of being told to wait, the child who learns
+          in their own beautiful way, and the belief that the right classroom changes everything.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Why we exist (parent-facing) ===== -->
+    <section class="section section--blue">
+      <div class="wrap split">
+        <div>
+          <span class="eyebrow">Why we exist</span>
+          <h2>A school built around your child - not the other way around.</h2>
+          <p>
+            Too many families are told their child is "too much" for a classroom, or handed
+            a waitlist instead of a welcome. We built Roosevelt Academy for exactly those children.
+            Here, one dedicated classroom, one teacher who truly knows your child, and an
+            individualized learning plan mean your child is met where they are, every single day.
+          </p>
+          <p>
+            Your child is not a diagnosis to us. They are a learner with gifts the world needs
+            to meet. Our job is to help them discover those gifts, at their own pace, in a place
+            that feels safe enough to try.
+          </p>
+          <a class="btn btn--ghost" href="who-we-are.html">Read our story</a>
+        </div>
+        <div class="split__panel">
+          <h3 class="mt-0">What families can count on</h3>
+          <ul class="trust-list">
+            <li>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>
+              <span><strong>Small classes.</strong> A low student-to-staff ratio so every child is truly known.</span>
+            </li>
+            <li>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>
+              <span><strong>One teacher who knows your child.</strong> A dedicated educator who learns how your child thinks, communicates, and grows.</span>
+            </li>
+            <li>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>
+              <span><strong>Privacy first.</strong> Your family's information is kept confidential and secure, always.</span>
+            </li>
+            <li>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>
+              <span><strong>No cost barriers.</strong> Need-based scholarships keep our doors open to every family.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Impact / credibility (donor-facing) ===== -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head center">
+          <span class="eyebrow">Our impact</span>
+          <h2>A real school, with results you can trust.</h2>
+          <p class="lead">Every figure below is reported in our annual impact statement, because trust is earned with transparency.</p>
+        </div>
+        <div class="stats">
+          <div class="stat"><div class="stat__num">1</div><div class="stat__label">Dedicated classroom</div></div>
+          <div class="stat"><div class="stat__num">1:1</div><div class="stat__label">Teacher-to-student attention</div></div>
+          <div class="stat"><div class="stat__num">100%</div><div class="stat__label">Individualized learning plans</div></div>
+          <div class="stat"><div class="stat__num">Ages 2-22</div><div class="stat__label">Students we serve</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== What donations fund ===== -->
+    <section class="section section--sage">
+      <div class="wrap">
+        <div class="section-head center">
+          <span class="eyebrow">Where your gift goes</span>
+          <h2>Specific support, real learning.</h2>
+          <p class="lead measure center">We don't deal in vague promises. Here's exactly what your generosity makes possible in our classrooms.</p>
+        </div>
+        <div class="grid grid--3">
+          <div class="card">
+            <div class="icon-badge icon-badge--blue">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg>
+            </div>
+            <h3>$50 - a day of school</h3>
+            <p>Funds a full day of individualized learning and on-site therapy for a child whose family needs help with tuition.</p>
+          </div>
+          <div class="card">
+            <div class="icon-badge icon-badge--sage">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M9 13h6M9 17h4"/></svg>
+            </div>
+            <h3>$250 - adaptive learning tools</h3>
+            <p>Provides communication devices, sensory supports, and adaptive technology that help a child access the lesson.</p>
+          </div>
+          <div class="card">
+            <div class="icon-badge icon-badge--apricot">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13A4 4 0 0 1 16 11"/></svg>
+            </div>
+            <h3>$1,000 - a scholarship season</h3>
+            <p>Helps cover a season of need-based tuition, so a child can keep their seat in the classroom no matter what.</p>
+          </div>
+        </div>
+        <div class="center" style="margin-top:2.2rem;">
+          <a class="btn btn--primary btn--lg" href="donate.html">See our funding goal &amp; give</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Dual CTA band ===== -->
+    <section class="section">
+      <div class="wrap">
+        <div class="cta-band">
+          <h2>Two ways forward. Both start here.</h2>
+          <p>Whether you're a parent exploring a school for your child or a friend who wants to help one learn, there's a place for you at Roosevelt Academy.</p>
+          <div class="hero__ctas" style="justify-content:center; margin-top:1.4rem; margin-bottom:0;">
+            <a class="btn btn--warm btn--lg" href="programs.html#admissions">Explore enrollment</a>
+            <a class="btn btn--ghost btn--lg" href="donate.html">Become a donor</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="index.html" style="margin-bottom:0.8rem;">
+            <!-- INSERT SCHOOL LOGO HERE -->
+            <span class="brand__logo-slot" aria-hidden="true">LOGO</span>
+            <span class="brand__name" style="color:#fff;">Roosevelt Academy<span></span></span>
+          </a>
+          <p>A safe place for every child to learn and grow. A nonprofit day school for children with special needs and the families who love them.</p>
+        </div>
+        <div class="footer">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="who-we-are.html">Who We Are</a></li>
+            <li><a href="programs.html">Programs &amp; Services</a></li>
+            <li><a href="donate.html">Donate</a></li>
+          </ul>
+        </div>
+        <div class="footer">
+          <h4>Admissions</h4>
+          <ul>
+            <li><a href="programs.html#admissions">Schedule a tour</a></li>
+            <li><a href="programs.html">Our programs</a></li>
+            <li><a href="who-we-are.html">Meet the team</a></li>
+          </ul>
+        </div>
+        <div class="footer">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@brightharbor.org">hello@brightharbor.org</a></li>
+            <li><a href="tel:15125550199">512.555.0199</a></li>
+            <li>Austin, Texas</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Roosevelt Academy Foundation. A registered 501(c)(3) nonprofit day school. Tax ID placeholder.</span>
+        <span>Your privacy matters - we never sell or share family information.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>/* Bright Harbor Foundation - shared interactions (vanilla JS) */
+(function () {
+  "use strict";
+
+  /* Mobile nav toggle */
+  var toggle = document.querySelector(".nav__toggle");
+  var links = document.querySelector(".nav__links");
+  if (toggle && links) {
+    toggle.addEventListener("click", function () {
+      var open = links.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    // close menu when a link is tapped (mobile)
+    links.addEventListener("click", function (e) {
+      if (e.target.tagName === "A") {
+        links.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  /* Animate any progress bars into view */
+  var bars = document.querySelectorAll(".progress__bar[data-fill]");
+  if (bars.length) {
+    var fill = function () {
+      bars.forEach(function (bar) {
+        bar.style.width = bar.getAttribute("data-fill") + "%";
+      });
+    };
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries, obs) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) { fill(); obs.disconnect(); }
+        });
+      }, { threshold: 0.4 });
+      bars.forEach(function (b) { io.observe(b); });
+    } else {
+      fill();
+    }
+  }
+
+  /* Donation amount picker (placeholder - no payment processor wired yet) */
+  var picker = document.querySelector(".amount-picker");
+  if (picker) {
+    var output = document.getElementById("selected-amount");
+    picker.addEventListener("click", function (e) {
+      var btn = e.target.closest("button");
+      if (!btn) return;
+      picker.querySelectorAll("button").forEach(function (b) { b.classList.remove("is-active"); });
+      btn.classList.add("is-active");
+      if (output) output.textContent = btn.getAttribute("data-amount");
+    });
+  }
+
+  var donateBtn = document.getElementById("donate-action");
+  if (donateBtn) {
+    donateBtn.addEventListener("click", function () {
+      var amt = document.getElementById("selected-amount");
+      var val = amt ? amt.textContent : "your gift";
+      alert(
+        "Thank you for your generosity!\n\n" +
+        "This is a placeholder. A secure payment processor (such as Stripe, " +
+        "PayPal Giving, or your donation platform of choice) will be connected here.\n\n" +
+        "Selected gift: $" + val
+      );
+    });
+  }
+})();
+</script>
+</body>
+</html>
+
