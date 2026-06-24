@@ -423,12 +423,11 @@ p { margin: 0 0 1.1em; }
     radial-gradient(800px 360px at 85% -20%, var(--sage-lt) 0%, transparent 60%),
     radial-gradient(700px 340px at 0% 0%, var(--harbor-blue-lt) 0%, transparent 55%),
     var(--cream);
-  padding: clamp(2.2rem, 5vw, 3.2rem) 0 clamp(2.2rem, 5vw, 3.2rem);
+  padding: clamp(3rem, 7vw, 5rem) 0 clamp(2.5rem, 5vw, 3.5rem);
   border-bottom: 1px solid var(--line);
 }
-.page-hero .eyebrow { margin-bottom: 0.5rem; }
 .page-hero h1 { margin-bottom: 0.6rem; }
-.page-hero p { max-width: 60ch; margin-bottom: 0; }
+.page-hero p { max-width: 60ch; }
 
 /* ---- CTA band ---- */
 .cta-band {
