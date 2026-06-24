@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate — Roosevelt Academy Day School</title>
+  <meta name="description" content="Your gift to Roosevelt Academy funds scholarships, adaptive classroom tools, and on-site therapy for students with special needs. See our goal and exactly what donations make possible." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <!-- INSERT SCHOOL LOGO HERE -->
+        <span class="brand__logo-slot" aria-hidden="true">LOGO</span>
+        <span class="brand__name">Roosevelt Academy<span></span></span>
+      </a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="who-we-are.html">Who We Are</a></li>
+        <li><a href="programs.html">Programs &amp; Services</a></li>
+        <li><a href="donate.html" aria-current="page">Donate</a></li>
+        <li class="nav__cta"><a class="btn btn--warm" href="programs.html#admissions">Schedule a Tour</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== Page hero ===== -->
+    <section class="page-hero">
+      <div class="wrap">
+        <span class="eyebrow">Donate</span>
+        <h1>Your gift becomes a child's education.</h1>
+        <p class="lead">
+          Roosevelt Academy keeps tuition within reach for every family through need-based
+          scholarships. That's only possible because of donors like you. Here's our goal,
+          exactly where your money goes, and how to give.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Goal + giving ===== -->
+    <section class="section">
+      <div class="wrap split">
+        <!-- Goal -->
+        <div>
+          <span class="eyebrow">Our 2026 scholarship goal</span>
+          <h2>Keep every seat in our classroom funded.</h2>
+          <div class="goal" style="margin-top:1.4rem;">
+            <div class="goal__row">
+              <span class="goal__raised">$[X] raised</span>
+              <span class="goal__target">of $[goal] goal</span>
+            </div>
+            <div class="progress" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="Fundraising progress">
+              <div class="progress__bar" data-fill="50"></div>
+            </div>
+            <p class="goal__meta">[X]% of the way there · [X] donors · goal closes December 31, 2026</p>
+          </div>
+          <p style="margin-top:1.4rem;">
+            Our classroom runs on scholarships. When families can't cover tuition, donors make
+            it possible for their child to keep their seat, with individualized learning and
+            zero cost barriers. Every dollar goes directly to a real student.
+          </p>
+          <div class="privacy-note" style="margin-top:0.4rem;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+            <span><strong>Giving is safe.</strong> Donations are processed through an encrypted, PCI-compliant platform. We never see or store your card details, and your information is never sold or shared.</span>
+          </div>
+        </div>
+
+        <!-- Donation form (placeholder) -->
+        <div class="split__panel">
+          <h3 class="mt-0">Make a gift</h3>
+          <p style="color:var(--ink-soft);">Choose an amount or enter your own. Every gift is tax-deductible.</p>
+
+          <div class="amount-picker" role="group" aria-label="Choose donation amount">
+            <button type="button" data-amount="50">$50</button>
+            <button type="button" data-amount="100" class="is-active">$100</button>
+            <button type="button" data-amount="250">$250</button>
+            <button type="button" data-amount="500">$500</button>
+            <button type="button" data-amount="1000">$1,000</button>
+          </div>
+
+          <label for="custom" style="display:block; font-weight:700; margin-bottom:0.3rem;">Or enter a custom amount</label>
+          <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:1.2rem;">
+            <span style="font-weight:800; font-size:1.2rem; color:var(--ink-soft);">$</span>
+            <input id="custom" type="number" min="1" placeholder="Amount"
+              oninput="var v=this.value; if(v){document.getElementById('selected-amount').textContent=v; document.querySelectorAll('.amount-picker button').forEach(function(b){b.classList.remove('is-active');});}"
+              style="flex:1; padding:0.8rem 1rem; border:1px solid var(--line); border-radius:12px; font:inherit; background:#fff;" />
+          </div>
+
+          <p style="font-weight:700; margin-bottom:0.4rem;">You're giving: <span style="color:var(--harbor-blue-dk);">$<span id="selected-amount">100</span></span></p>
+
+          <button id="donate-action" type="button" class="btn btn--warm btn--block btn--lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-8-4.5-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.5-8 11-8 11Z"/></svg>
+            Donate now
+          </button>
+          <p style="margin-top:0.8rem; font-size:0.85rem; color:var(--ink-soft); text-align:center;">
+            Placeholder button — a secure payment processor (Stripe, PayPal Giving, etc.) will be connected here.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== What donations fund ===== -->
+    <section class="section section--sage">
+      <div class="wrap">
+        <div class="section-head center">
+          <span class="eyebrow">Exactly where it goes</span>
+          <h2>No vague promises. Real, specific learning.</h2>
+          <p class="lead measure center">Pick a level and see precisely what your generosity makes possible for a student and their family.</p>
+        </div>
+        <div class="grid grid--4">
+          <div class="tier">
+            <span class="tier__amt">$50</span>
+            <span class="tier__funds">A day of school</span>
+            <span class="tier__desc">A full day of individualized learning and on-site therapy for one child.</span>
+          </div>
+          <div class="tier">
+            <span class="tier__amt">$250</span>
+            <span class="tier__funds">Adaptive learning tools</span>
+            <span class="tier__desc">A communication device, sensory kit, or adaptive technology for the classroom.</span>
+          </div>
+          <div class="tier">
+            <span class="tier__amt">$500</span>
+            <span class="tier__funds">A month of therapy</span>
+            <span class="tier__desc">A month of on-site speech, occupational, or physical therapy for a student.</span>
+          </div>
+          <div class="tier">
+            <span class="tier__amt">$1,000</span>
+            <span class="tier__funds">A scholarship season</span>
+            <span class="tier__desc">A season of need-based tuition, so a child keeps their seat no matter what.</span>
+          </div>
+        </div>
+
+        <!-- Allocation transparency -->
+        <div class="split" style="margin-top:3rem; align-items:start;">
+          <div class="goal">
+            <h3 class="mt-0">Where every dollar goes</h3>
+            <div class="stack" style="margin-top:1rem;">
+              <div>
+                <div class="goal__row" style="margin-bottom:0.4rem;"><span style="font-weight:800;">Classrooms &amp; student programs</span><span style="font-weight:800; color:var(--sage-dk);">89%</span></div>
+                <div class="progress"><div class="progress__bar" data-fill="89" style="background:var(--sage);"></div></div>
+              </div>
+              <div>
+                <div class="goal__row" style="margin-bottom:0.4rem;"><span style="font-weight:800;">Operations &amp; staff</span><span style="font-weight:800; color:var(--harbor-blue-dk);">8%</span></div>
+                <div class="progress"><div class="progress__bar" data-fill="8" style="background:var(--harbor-blue);"></div></div>
+              </div>
+              <div>
+                <div class="goal__row" style="margin-bottom:0.4rem;"><span style="font-weight:800;">Fundraising</span><span style="font-weight:800; color:var(--apricot-dk);">3%</span></div>
+                <div class="progress"><div class="progress__bar" data-fill="3" style="background:var(--apricot);"></div></div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <span class="eyebrow">Accountable to you</span>
+            <h2 style="margin-top:0.2rem;">Trust, in the fine print too.</h2>
+            <ul class="trust-list">
+              <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg><span>Registered 501(c)(3) nonprofit school. Your gift is tax-deductible.</span></li>
+              <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg><span>Independently audited financials, published every year.</span></li>
+              <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg><span>89¢ of every dollar reaches students and classrooms directly.</span></li>
+              <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg><span>An annual impact report sent to every donor.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Other ways to give ===== -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head center">
+          <span class="eyebrow">More ways to help</span>
+          <h2>Generosity comes in many forms</h2>
+        </div>
+        <div class="grid grid--3">
+          <div class="card">
+            <div class="icon-badge icon-badge--blue">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7"/><path d="M3 7l9 6 9-6"/></svg>
+            </div>
+            <h3>Sponsor a student</h3>
+            <p>Join our Harbor Circle with a monthly gift and help one child keep their seat all year long. It's the steady support that lets us say yes.</p>
+          </div>
+          <div class="card">
+            <div class="icon-badge icon-badge--sage">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-9M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>
+            </div>
+            <h3>Employer matching</h3>
+            <p>Many employers double donations to schools. Check with your HR team. Your gift could go twice as far at no extra cost to you.</p>
+          </div>
+          <div class="card">
+            <div class="icon-badge icon-badge--apricot">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1L12 16.6 5.7 21l2.3-7.1-6-4.5h7.6z"/></svg>
+            </div>
+            <h3>Volunteer or host</h3>
+            <p>Give time instead of money, or alongside it, as a classroom helper, field-trip chaperone, or by hosting a community fundraiser.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Closing CTA ===== -->
+    <section class="section section--blue">
+      <div class="wrap">
+        <div class="cta-band">
+          <h2>Somewhere, a child is waiting for their classroom.</h2>
+          <p>Your gift, whatever its size, helps them keep their seat. Thank you for believing they're worth it.</p>
+          <div class="hero__ctas" style="justify-content:center; margin-top:1.4rem; margin-bottom:0;">
+            <a class="btn btn--warm btn--lg" href="#top" onclick="window.scrollTo({top:0});">Give today</a>
+            <a class="btn btn--ghost btn--lg" href="programs.html">See the programs you'd fund</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="index.html" style="margin-bottom:0.8rem;">
+            <!-- INSERT SCHOOL LOGO HERE -->
+            <span class="brand__logo-slot" aria-hidden="true">LOGO</span>
+            <span class="brand__name" style="color:#fff;">Roosevelt Academy<span></span></span>
+          </a>
+          <p>A safe place for every child to learn and grow. A nonprofit day school for children with special needs and the families who love them.</p>
+        </div>
+        <div class="footer">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="who-we-are.html">Who We Are</a></li>
+            <li><a href="programs.html">Programs &amp; Services</a></li>
+            <li><a href="donate.html">Donate</a></li>
+          </ul>
+        </div>
+        <div class="footer">
+          <h4>Admissions</h4>
+          <ul>
+            <li><a href="programs.html#admissions">Schedule a tour</a></li>
+            <li><a href="programs.html">Our programs</a></li>
+            <li><a href="who-we-are.html">Meet the team</a></li>
+          </ul>
+        </div>
+        <div class="footer">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@brightharbor.org">hello@brightharbor.org</a></li>
+            <li><a href="tel:15125550199">512.555.0199</a></li>
+            <li>Austin, Texas</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Roosevelt Academy Foundation. A registered 501(c)(3) nonprofit day school. Tax ID placeholder.</span>
+        <span>Your privacy matters — we never sell or share family information.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
+
