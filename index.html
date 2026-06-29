@@ -7,7 +7,7 @@
   <meta name="description" content="Roosevelt Academy is a nonprofit day school in Austin, Texas for students in grades 8–12 with disabilities and diverse learning needs. Individualized academics, life skills, vocational readiness, and on-site therapy." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <style>/* =========================================================================
    Bright Harbor Foundation - shared stylesheet
    Visual identity: warm, safe, hopeful. Soft blues, warm whites, gentle greens.
@@ -19,24 +19,24 @@
   /* Core palette */
   --harbor-blue:    #3f7ca6;   /* primary - calm, trustworthy */
   --harbor-blue-dk: #2e5e80;   /* hover / depth */
-  --harbor-blue-lt: #e8f1f7;   /* soft wash background */
+  --harbor-blue-lt: #e8f2f9;   /* soft wash background */
   --sage:           #6fa988;   /* gentle green - growth, reassurance */
   --sage-dk:        #4f8568;
   --sage-lt:        #eaf3ee;
-  --apricot:        #e6a169;   /* warm accent - human, hopeful */
-  --apricot-dk:     #d18a4f;
-  --apricot-lt:     #fbeede;
+  --apricot:        #c8303a;   /* school red - from the Roosevelt logo */
+  --apricot-dk:     #a82530;
+  --apricot-lt:     #fce8e9;
 
-  /* Neutrals - warm, never stark */
-  --cream:          #fcf9f4;   /* page background */
-  --cream-2:        #f6f1e8;   /* alt section background */
+  /* Neutrals - cool white, never warm/orange */
+  --cream:          #f5f9fc;   /* page background - slight blue tint */
+  --cream-2:        #edf3f9;   /* alt section background */
   --white:          #ffffff;
   --ink:            #34434d;   /* body text - soft charcoal, not black */
   --ink-soft:       #5d6b73;   /* secondary text */
-  --line:           #ece4d7;   /* hairlines / borders */
+  --line:           #d4e2ec;   /* hairlines / borders */
 
   /* Type */
-  --font-head: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-head: "Lora", Georgia, "Times New Roman", serif;
   --font-body: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
   /* Shape & depth */
@@ -129,13 +129,13 @@ p { margin: 0 0 1.1em; }
   text-decoration: none;
 }
 .btn:hover { text-decoration: none; transform: translateY(-2px); }
-.btn:focus-visible { outline: 3px solid var(--apricot); outline-offset: 3px; }
+.btn:focus-visible { outline: 3px solid var(--harbor-blue); outline-offset: 3px; }
 
 .btn--primary { background: var(--harbor-blue); color: #fff; box-shadow: var(--shadow-sm); }
 .btn--primary:hover { background: var(--harbor-blue-dk); box-shadow: var(--shadow); }
 
-.btn--warm { background: var(--apricot); color: #44301c; box-shadow: var(--shadow-sm); }
-.btn--warm:hover { background: var(--apricot-dk); color: #3a2715; box-shadow: var(--shadow); }
+.btn--warm { background: var(--apricot); color: #fff; box-shadow: var(--shadow-sm); }
+.btn--warm:hover { background: var(--apricot-dk); color: #fff; box-shadow: var(--shadow); }
 
 .btn--ghost { background: transparent; color: var(--harbor-blue-dk); border-color: var(--harbor-blue); }
 .btn--ghost:hover { background: var(--harbor-blue); color: #fff; }
@@ -148,7 +148,7 @@ p { margin: 0 0 1.1em; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(252, 249, 244, 0.88);
+  background: rgba(245, 249, 252, 0.90);
   backdrop-filter: saturate(180%) blur(10px);
   border-bottom: 1px solid var(--line);
 }
@@ -552,7 +552,7 @@ p { margin: 0 0 1.1em; }
           <p class="hero__mission">
             Roosevelt Academy is a nonprofit day school in Austin for students in grades 8–12
             with disabilities and diverse learning needs. We pair individualized academics with
-            life skills, vocational readiness, and on-site therapy — so each student is taught
+            life skills, vocational readiness, and on-site therapy, so each student is taught
             the way they learn best.
           </p>
           <div class="hero__ctas">
@@ -598,7 +598,7 @@ p { margin: 0 0 1.1em; }
     <section class="section">
       <div class="wrap center">
         <p class="quote measure center">
-          We teach students the way they actually learn — one plan, one student at a time.
+          We teach students the way they actually learn: one plan, one student at a time.
         </p>
         <p class="lead measure center" style="margin-top:1.4rem;">
           Roosevelt was founded by Austin families and educators who wanted a high school built
@@ -615,7 +615,7 @@ p { margin: 0 0 1.1em; }
           <h2>We build the school around the student.</h2>
           <p>
             Every student at Roosevelt has an individualized learning plan, small classes, and a
-            team that knows them well. Real academics — reading, writing, math, and science — sit
+            team that knows them well. Real academics (reading, writing, math, and science) sit
             alongside executive function, life skills, and vocational readiness, every day.
           </p>
           <p>
@@ -637,7 +637,7 @@ p { margin: 0 0 1.1em; }
             </li>
             <li>
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>
-              <span><strong>Therapy on site.</strong> Speech, occupational, and other supports built into the school day — no separate appointments.</span>
+              <span><strong>Therapy on site.</strong> Speech, occupational, and other supports built into the school day, with no separate appointments.</span>
             </li>
             <li>
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>
@@ -678,21 +678,21 @@ p { margin: 0 0 1.1em; }
             <div class="icon-badge icon-badge--blue">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg>
             </div>
-            <h3>$50 — a day of school</h3>
+            <h3>$50: a day of school</h3>
             <p>Covers a full day of individualized learning and on-site therapy for a student whose family needs help with tuition.</p>
           </div>
           <div class="card">
             <div class="icon-badge icon-badge--sage">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M9 13h6M9 17h4"/></svg>
             </div>
-            <h3>$250 — adaptive learning tools</h3>
+            <h3>$250: adaptive learning tools</h3>
             <p>Provides communication devices, sensory supports, and adaptive technology that help a student access the lesson.</p>
           </div>
           <div class="card">
             <div class="icon-badge icon-badge--apricot">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13A4 4 0 0 1 16 11"/></svg>
             </div>
-            <h3>$1,000 — a scholarship season</h3>
+            <h3>$1,000: a scholarship season</h3>
             <p>Helps cover a season of need-based tuition, so a student can keep their seat no matter what.</p>
           </div>
         </div>
@@ -764,7 +764,7 @@ p { margin: 0 0 1.1em; }
       </div>
       <div class="footer__bottom">
         <span>© 2026 Roosevelt Academy for Students with Disabilities. EIN 42-3199427.</span>
-        <span>Your privacy matters — we never sell or share family information.</span>
+        <span>Your privacy matters. We never sell or share family information.</span>
       </div>
     </div>
   </footer>

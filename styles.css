@@ -1,7 +1,7 @@
 /* =========================================================================
-   Bright Harbor Foundation — shared stylesheet
-   Visual identity: warm, safe, hopeful. Soft blues, warm whites, gentle greens.
-   Type: Fraunces (soft serif, headings) + Nunito Sans (friendly body).
+   Roosevelt Academy — shared stylesheet
+   Visual identity: confident, plain, warm. Cool blues, soft whites, gentle greens.
+   Type: Lora (classic serif, headings) + Nunito Sans (clean body).
    ========================================================================= */
 
 /* ---- Design tokens ---- */
@@ -9,24 +9,24 @@
   /* Core palette */
   --harbor-blue:    #3f7ca6;   /* primary — calm, trustworthy */
   --harbor-blue-dk: #2e5e80;   /* hover / depth */
-  --harbor-blue-lt: #e8f1f7;   /* soft wash background */
+  --harbor-blue-lt: #e8f2f9;   /* soft wash background */
   --sage:           #6fa988;   /* gentle green — growth, reassurance */
   --sage-dk:        #4f8568;
   --sage-lt:        #eaf3ee;
-  --apricot:        #e6a169;   /* warm accent — human, hopeful */
-  --apricot-dk:     #d18a4f;
-  --apricot-lt:     #fbeede;
+  --apricot:        #c8303a;   /* school red — from the Roosevelt logo */
+  --apricot-dk:     #a82530;
+  --apricot-lt:     #fce8e9;
 
-  /* Neutrals — warm, never stark */
-  --cream:          #fcf9f4;   /* page background */
-  --cream-2:        #f6f1e8;   /* alt section background */
+  /* Neutrals — cool white, never warm/orange */
+  --cream:          #f5f9fc;   /* page background — slight blue tint */
+  --cream-2:        #edf3f9;   /* alt section background */
   --white:          #ffffff;
   --ink:            #34434d;   /* body text — soft charcoal, not black */
   --ink-soft:       #5d6b73;   /* secondary text */
-  --line:           #ece4d7;   /* hairlines / borders */
+  --line:           #d4e2ec;   /* hairlines / borders */
 
   /* Type */
-  --font-head: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-head: "Lora", Georgia, "Times New Roman", serif;
   --font-body: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
   /* Shape & depth */
@@ -119,13 +119,13 @@ p { margin: 0 0 1.1em; }
   text-decoration: none;
 }
 .btn:hover { text-decoration: none; transform: translateY(-2px); }
-.btn:focus-visible { outline: 3px solid var(--apricot); outline-offset: 3px; }
+.btn:focus-visible { outline: 3px solid var(--harbor-blue); outline-offset: 3px; }
 
 .btn--primary { background: var(--harbor-blue); color: #fff; box-shadow: var(--shadow-sm); }
 .btn--primary:hover { background: var(--harbor-blue-dk); box-shadow: var(--shadow); }
 
-.btn--warm { background: var(--apricot); color: #44301c; box-shadow: var(--shadow-sm); }
-.btn--warm:hover { background: var(--apricot-dk); color: #3a2715; box-shadow: var(--shadow); }
+.btn--warm { background: var(--apricot); color: #fff; box-shadow: var(--shadow-sm); }
+.btn--warm:hover { background: var(--apricot-dk); color: #fff; box-shadow: var(--shadow); }
 
 .btn--ghost { background: transparent; color: var(--harbor-blue-dk); border-color: var(--harbor-blue); }
 .btn--ghost:hover { background: var(--harbor-blue); color: #fff; }
@@ -138,7 +138,7 @@ p { margin: 0 0 1.1em; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(252, 249, 244, 0.88);
+  background: rgba(245, 249, 252, 0.90);
   backdrop-filter: saturate(180%) blur(10px);
   border-bottom: 1px solid var(--line);
 }
@@ -155,7 +155,7 @@ p { margin: 0 0 1.1em; }
 .brand:hover { text-decoration: none; }
 .brand__mark { width: 40px; height: 40px; flex: 0 0 auto; }
 
-/* Logo placeholder — swap for the school's real logo <img> when ready */
+/* Logo placeholder */
 .brand__logo-slot {
   width: 46px; height: 46px; flex: 0 0 auto;
   display: grid; place-items: center; text-align: center;
@@ -299,12 +299,12 @@ p { margin: 0 0 1.1em; }
   line-height: 1.35;
   color: var(--ink);
   font-weight: 500;
-  border-left: 4px solid var(--apricot);
+  border-left: 4px solid var(--harbor-blue);
   padding-left: 1.5rem;
   margin-left: 0;
 }
-.quote::before { content: “”; }
-.quote::after  { content: “”; }
+.quote::before { content: ""; }
+.quote::after  { content: ""; }
 
 /* ---- Trust strip ---- */
 .trust-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.9rem; }
