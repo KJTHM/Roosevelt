@@ -79,6 +79,7 @@ h1, h2, h3, h4 {
   color: var(--ink);
   margin: 0 0 0.5em;
   letter-spacing: -0.01em;
+  text-wrap: balance;
 }
 
 h1 { font-size: clamp(2.3rem, 5.2vw, 3.6rem); }
@@ -224,10 +225,9 @@ p { margin: 0 0 1.1em; }
     var(--cream);
 }
 .hero__inner {
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: clamp(2rem, 5vw, 4rem);
-  align-items: center;
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
   padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(3.5rem, 8vw, 6rem);
 }
 .hero h1 { margin-bottom: 0.4rem; }
@@ -235,28 +235,14 @@ p { margin: 0 0 1.1em; }
   font-size: clamp(1.15rem, 2.2vw, 1.4rem);
   color: var(--ink-soft);
   max-width: 46ch;
-  margin-bottom: 1.8rem;
+  margin: 0 auto 1.8rem;
 }
-.hero__ctas { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-bottom: 1.3rem; }
+.hero__ctas { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-bottom: 1.3rem; justify-content: center; }
 .hero__assure {
   display: inline-flex; align-items: center; gap: 0.5rem;
   font-size: 0.95rem; color: var(--ink-soft); font-weight: 700;
 }
 .hero__assure svg { color: var(--sage-dk); flex: 0 0 auto; }
-
-/* Hero illustration card */
-.hero__art {
-  position: relative;
-  border-radius: 28px;
-  background: linear-gradient(160deg, #fff, var(--harbor-blue-lt));
-  box-shadow: var(--shadow-lg);
-  padding: 1.5rem;
-  aspect-ratio: 4 / 3.4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hero__art svg { width: 100%; height: auto; }
 
 /* ---- Generic cards & grids ---- */
 .grid { display: grid; gap: 1.5rem; }
@@ -481,8 +467,6 @@ p { margin: 0 0 1.1em; }
 
 /* ---- Responsive ---- */
 @media (max-width: 900px) {
-  .hero__inner { grid-template-columns: 1fr; }
-  .hero__art { order: -1; max-width: 460px; margin: 0 auto; width: 100%; }
   .split { grid-template-columns: 1fr; }
   .grid--4 { grid-template-columns: repeat(2, 1fr); }
   .stats { grid-template-columns: repeat(2, 1fr); gap: 2rem 1rem; }
@@ -537,7 +521,7 @@ p { margin: 0 0 1.1em; }
         <li><a href="who-we-are.html">Who We Are</a></li>
         <li><a href="programs.html">Programs &amp; Services</a></li>
         <li><a href="donate.html">Donate</a></li>
-        <li class="nav__cta"><a class="btn btn--warm" href="programs.html#admissions">Schedule a Tour</a></li>
+        <li class="nav__cta"><a class="btn btn--primary" href="programs.html#admissions">Schedule a Tour</a></li>
       </ul>
     </nav>
   </header>
@@ -546,51 +530,22 @@ p { margin: 0 0 1.1em; }
     <!-- ===== Hero ===== -->
     <section class="hero">
       <div class="wrap hero__inner">
-        <div class="hero__copy">
-          <span class="eyebrow">A day school in Austin · Grades 8–12</span>
-          <h1>A school built around how your student learns.</h1>
-          <p class="hero__mission">
-            Roosevelt Academy is a nonprofit day school in Austin for students in grades 8–12
-            with disabilities and diverse learning needs. We pair individualized academics with
-            life skills, vocational readiness, and on-site therapy, so each student is taught
-            the way they learn best.
-          </p>
-          <div class="hero__ctas">
-            <a class="btn btn--warm btn--lg" href="programs.html#admissions">Schedule a tour</a>
-            <a class="btn btn--primary btn--lg" href="donate.html">Donate today</a>
-          </div>
-          <span class="hero__assure">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="M9 12l2 2 4-4"/></svg>
-            Now welcoming founding families for grades 8–12 in Austin.
-          </span>
+        <span class="eyebrow">A day school in Austin · Grades 8–12</span>
+        <h1>A school built around how your student learns.</h1>
+        <p class="hero__mission">
+          Roosevelt Academy is a nonprofit day school in Austin for students in grades 8–12
+          with disabilities and diverse learning needs. We pair individualized academics with
+          life skills, vocational readiness, and on-site therapy, so each student is taught
+          the way they learn best.
+        </p>
+        <div class="hero__ctas">
+          <a class="btn btn--primary btn--lg" href="programs.html#admissions">Schedule a tour</a>
+          <a class="btn btn--ghost btn--lg" href="donate.html">Donate today</a>
         </div>
-
-        <div class="hero__art">
-          <!-- Warm, abstract illustration: a sheltering hand around a child beneath the sun -->
-          <svg viewBox="0 0 420 360" role="img" aria-label="A protective hand sheltering a child beneath a warm sun" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#eaf3ee"/>
-                <stop offset="1" stop-color="#e8f1f7"/>
-              </linearGradient>
-            </defs>
-            <rect x="0" y="0" width="420" height="360" rx="22" fill="url(#sky)"/>
-            <circle cx="312" cy="92" r="46" fill="#f4d09a"/>
-            <circle cx="312" cy="92" r="46" fill="#e6a169" opacity="0.25"/>
-            <!-- gentle hills -->
-            <path d="M0 300c70-34 150-34 220 0s140 30 200 4v56H0Z" fill="#cfe6d8"/>
-            <path d="M0 322c80-22 160-18 230 6s130 20 190-2v34H0Z" fill="#a9d3ba"/>
-            <!-- sheltering hand -->
-            <path d="M96 236c-18-30-26-78-10-110 8-15 26-12 26 6 0-22 4-44 20-44s16 26 16 44c2-18 6-34 22-32s12 30 10 46c6-14 18-22 28-12 9 9-2 28-10 44-9 18-20 44-44 58-30 17-72 18-88 0Z" fill="#f6c9a0"/>
-            <path d="M96 236c-18-30-26-78-10-110 8-15 26-12 26 6" fill="none" stroke="#e6a169" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
-            <!-- child figure resting in the hand -->
-            <circle cx="150" cy="180" r="22" fill="#3f7ca6"/>
-            <path d="M120 244c0-22 14-38 30-38s30 16 30 38Z" fill="#3f7ca6"/>
-            <circle cx="150" cy="180" r="22" fill="#fff" opacity="0.12"/>
-            <!-- little heart -->
-            <path d="M300 196c-6-6-16-2-16 7 0 7 16 17 16 17s16-10 16-17c0-9-10-13-16-7Z" fill="#6fa988"/>
-          </svg>
-        </div>
+        <span class="hero__assure">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="M9 12l2 2 4-4"/></svg>
+          Now welcoming founding families for grades 8–12 in Austin.
+        </span>
       </div>
     </section>
 

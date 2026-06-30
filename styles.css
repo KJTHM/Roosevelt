@@ -69,6 +69,7 @@ h1, h2, h3, h4 {
   color: var(--ink);
   margin: 0 0 0.5em;
   letter-spacing: -0.01em;
+  text-wrap: balance;
 }
 
 h1 { font-size: clamp(2.3rem, 5.2vw, 3.6rem); }
@@ -425,9 +426,10 @@ p { margin: 0 0 1.1em; }
     var(--cream);
   padding: clamp(3rem, 7vw, 5rem) 0 clamp(2.5rem, 5vw, 3.5rem);
   border-bottom: 1px solid var(--line);
+  text-align: center;
 }
-.page-hero h1 { margin-bottom: 0.6rem; max-width: 28ch; }
-.page-hero p { max-width: 60ch; }
+.page-hero h1 { margin-bottom: 0.6rem; max-width: 28ch; margin-left: auto; margin-right: auto; }
+.page-hero p { max-width: 60ch; margin-left: auto; margin-right: auto; }
 
 /* ---- CTA band ---- */
 .cta-band {
