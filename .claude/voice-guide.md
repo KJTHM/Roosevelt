@@ -27,7 +27,7 @@ school — not a nonprofit fundraising pitch and not AI filler. Write to this gu
 |---|---|
 | Lead with what's taught and how. "Reading, writing, math, science, on an individualized plan." | Lead with feelings. "where they're seen, safe, and celebrated." |
 | Present tense, active voice. "We design lessons around each student." | Hedge. "Our approach is designed to help students feel supported." |
-| One concrete fact a competitor can't copy. "A real member of our team follows up within two business days." | Stack abstractions. "individualized, meaningful, and built to last." |
+| One concrete fact a competitor can't copy. "A member of our team follows up within two business days." | Stack abstractions. "individualized, meaningful, and built to last." |
 | Name the grade range plainly. "Grades 8–12." | Inflate scope. "ages 2 to 22" (factually wrong — fix on sight). |
 | Say it once. | Repeat the comfort line. "safe and understood" 3+ times across a page. |
 | Respect the reader's intelligence. "If we're not the right fit, we'll point you to a school that is." | Emotional fundraising bait. "Somewhere, a child is waiting for their classroom." |
@@ -75,6 +75,8 @@ All "before" lines are live in `index.html`.
 - **Mirror-the-prompt openers** — "In today's world, education matters more than ever."
 - **Therapy-speak (school-specific)** — "seen, safe, and celebrated," "students feel understood."
 - **Fundraising-pitch emotion (school-specific)** — "a child is waiting for their classroom."
+- **Intensifying language** — "actually learn," "real academics," "truly known," "genuinely care."
+  These imply everything else is fake. Just state the thing: "learn," "academics," "known."
 
 **School-specific tells observed in Roosevelt's own copy (add to watch list):**
 - **"deserve" as a load-bearing verb** — appears 6+ times across who-we-are.html. One use is a stance;

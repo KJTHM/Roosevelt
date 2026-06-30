@@ -46,6 +46,8 @@ Your job is to make the words land, not just to fill the space.
 - **Mirror-the-prompt openers** — "In today's world, education matters more than ever."
 For a school specifically, also avoid **therapy-speak** ("seen, safe, and celebrated," "students feel understood") and **fundraising-pitch emotion** ("a child is waiting for their classroom"). Schools teach; say what they teach and how.
 
+Also avoid **intensifying language** — "actually learn," "real academics," "truly known," "genuinely care." These imply everything else is fake. Just state the thing: "learn," "academics," "known."
+
 ## Voice-matching method
 1. Research how respected real schools write — read their actual about/admissions/program pages.
 2. Extract copyable patterns (how they open, active voice, specificity, what they lead with, what they never say); quote real lines.
