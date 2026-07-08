@@ -241,7 +241,8 @@ p { margin: 0 0 1.1em; }
   margin: 0 auto 1.8rem;
 }
 .hero__logo-mark { display: flex; justify-content: center; margin-top: 2rem; }
-.hero__logo-mark img { width: 130px; height: 130px; border-radius: 50%; object-fit: contain; box-shadow: var(--shadow); }
+.hero__logo-mark img { width: clamp(160px, 26vw, 230px); height: clamp(160px, 26vw, 230px); border-radius: 50%; object-fit: contain; box-shadow: var(--shadow); }
+.hero .eyebrow { font-size: clamp(1rem, 2.2vw, 1.35rem); letter-spacing: 0.08em; margin-bottom: 1.6rem; }
 
 /* ---- Generic cards & grids ---- */
 .grid { display: grid; gap: 1.5rem; }
@@ -530,7 +531,6 @@ p { margin: 0 0 1.1em; }
     <section class="hero">
       <div class="wrap hero__inner">
         <span class="eyebrow">A school built around the student: grades 8-12 in Austin, TX</span>
-        <h1>A school built around how your student learns.</h1>
         <p class="hero__mission">
           Roosevelt Academy is a nonprofit day school in Austin for students with disabilities
           and diverse learning needs. We pair individualized academics with life skills,
@@ -689,7 +689,7 @@ p { margin: 0 0 1.1em; }
         <div class="footer">
           <h4>Admissions</h4>
           <ul>
-            <li><a href="programs.html#admissions">Schedule a tour</a></li>
+
             <li><a href="programs.html">Our programs</a></li>
             <li><a href="who-we-are.html">Meet the team</a></li>
           </ul>
