@@ -240,8 +240,8 @@ p { margin: 0 0 1.1em; }
   max-width: 46ch;
   margin: 0 auto 1.8rem;
 }
-.hero__logo-mark { display: flex; justify-content: center; margin-top: 2rem; }
-.hero__logo-mark img { width: clamp(185px, 29vw, 260px); height: clamp(185px, 29vw, 260px); border-radius: 50%; object-fit: contain; box-shadow: var(--shadow); }
+.hero__logo-mark { display: flex; justify-content: center; margin-bottom: 1.6rem; }
+.hero__logo-mark img { width: clamp(200px, 32vw, 280px); height: clamp(200px, 32vw, 280px); border-radius: 50%; object-fit: contain; box-shadow: var(--shadow); }
 .hero .eyebrow { font-family: var(--font-head); font-weight: 600; font-size: clamp(1.6rem, 4.5vw, 3.2rem); text-transform: none; letter-spacing: -0.01em; color: var(--ink); margin-bottom: 1.4rem; }
 
 /* ---- Generic cards & grids ---- */
@@ -530,6 +530,9 @@ p { margin: 0 0 1.1em; }
     <!-- ===== Hero ===== -->
     <section class="hero">
       <div class="wrap hero__inner">
+        <div class="hero__logo-mark">
+          <img src="logo.jpeg" alt="Roosevelt Academy seal" />
+        </div>
         <span class="eyebrow">A school built around the student: Grades 8-12 in Austin, TX</span>
         <p class="hero__mission">
           Roosevelt Academy is a nonprofit day school in Austin for students with disabilities
@@ -537,9 +540,6 @@ p { margin: 0 0 1.1em; }
           vocational readiness, so each student is taught the way
           they learn best.
         </p>
-        <div class="hero__logo-mark">
-          <img src="logo.jpeg" alt="Roosevelt Academy seal" />
-        </div>
       </div>
     </section>
 
