@@ -428,8 +428,9 @@ p { margin: 0 0 1.1em; }
   border-bottom: 1px solid var(--line);
   text-align: center;
 }
+.page-hero .wrap { max-width: 1000px; }
 .page-hero h1 { margin-bottom: 0.6rem; max-width: 28ch; margin-left: auto; margin-right: auto; }
-.page-hero p { max-width: 60ch; margin-left: auto; margin-right: auto; }
+.page-hero p { max-width: min(60ch, 82%); margin-left: auto; margin-right: auto; }
 
 /* ---- CTA band ---- */
 .cta-band {
@@ -483,6 +484,8 @@ p { margin: 0 0 1.1em; }
 
 @media (max-width: 680px) {
   body { font-size: 1.02rem; }
+  .lead { max-width: min(60ch, 85%); margin-left: auto; margin-right: auto; }
+  .section-head { max-width: min(60ch, 88%); }
   .nav__links {
     position: absolute;
     top: 100%; left: 0; right: 0;
