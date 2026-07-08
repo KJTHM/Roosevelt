@@ -452,8 +452,8 @@ p { margin: 0 0 1.1em; }
   padding: clamp(2.5rem, 5vw, 3.5rem) 0 1.5rem;
 }
 .site-footer a { color: #cfe3f0; }
-.site-footer .wrap { max-width: 1440px; }
-.footer__grid { display: grid; grid-template-columns: 1.3fr 0.9fr 1.8fr; gap: clamp(2rem, 4vw, 5rem); }
+.site-footer .wrap { max-width: 100%; padding: 0 clamp(2rem, 6vw, 6rem); }
+.footer__grid { display: grid; grid-template-columns: 220px 180px 1fr; gap: clamp(3rem, 6vw, 7rem); }
 .footer__brand .brand__name { color: #fff; }
 .footer__brand .brand img { height: 100px !important; width: 100px !important; }
 .footer__brand p { color: #aeb9bf; font-size: 0.96rem; max-width: 32ch; }
