@@ -454,7 +454,7 @@ p { margin: 0 0 1.1em; }
 .site-footer a { color: #cfe3f0; }
 .footer__grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 2rem; }
 .footer__brand .brand__name { color: #fff; }
-.footer__brand .brand img { height: 80px !important; width: 80px !important; }
+.footer__brand .brand img { height: 100px !important; width: 100px !important; }
 .footer__brand p { color: #aeb9bf; font-size: 0.96rem; max-width: 32ch; }
 .footer h4 { color: #fff; font-family: var(--font-body); font-weight: 800; font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.9rem; }
 .footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.55rem; }
