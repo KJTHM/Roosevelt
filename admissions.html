@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admissions — Roosevelt Academy Day School</title>
+  <meta name="description" content="Admissions information for Roosevelt Academy — a nonprofit day school in Austin, TX for students in grades 8-12 with disabilities and diverse learning needs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <img src="logo.jpeg" alt="Roosevelt Academy — Roosevelt Hermit Crabs" style="height:52px; width:52px; object-fit:contain; border-radius:50%;" />
+        <span class="brand__name">Roosevelt Academy<span></span></span>
+      </a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="who-we-are.html">Who We Are</a></li>
+        <li><a href="programs.html">Programs &amp; Services</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="admissions.html" aria-current="page">Admissions</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== Page hero ===== -->
+    <section class="page-hero">
+      <div class="wrap">
+        <span class="eyebrow">Admissions</span>
+        <h1>Admissions</h1>
+      </div>
+    </section>
+
+    <!-- ===== Admissions Philosophy ===== -->
+    <section class="section">
+      <div class="wrap" style="max-width:72ch;">
+        <h2>Admissions Philosophy</h2>
+        <p>Roosevelt Academy is a mission-driven, relationship-centered school intentionally designed to serve a small community of students. Because of our individualized educational model, enrollment is based not only on academic and support needs, but also on the school's ability to provide an appropriate educational environment for each student while maintaining the integrity of our program.</p>
+        <p>Admission is not based on a first-come, first-served basis. Each applicant is considered individually, taking into account the student's educational profile, support needs, readiness for our program, and the family's commitment to partnering with the Academy.</p>
+        <p>Enrollment decisions are made holistically and consider factors including, but not limited to:</p>
+        <ul style="margin: 0 0 1.1em; padding-left: 1.5rem;">
+          <li>Alignment with Roosevelt Academy's mission, values, and educational philosophy.</li>
+          <li>The student's ability to benefit from the Academy's instructional model.</li>
+          <li>The Academy's ability to appropriately meet the student's educational, behavioral, social, and support needs with available staffing, resources, and program capacity.</li>
+          <li>The family's willingness to actively partner with the Academy and support its policies, expectations, and culture.</li>
+          <li>The overall composition and balance of the student community to ensure a safe, productive, and positive learning environment for all students.</li>
+        </ul>
+        <p>Because our program is intentionally small and highly individualized, the Academy reserves the right to limit enrollment, establish waitlists, decline admission, or determine that another educational setting may better meet a student's needs.</p>
+        <p>Admission and continued enrollment should be mutual privileges. Roosevelt Academy reserves the right to make all final decisions regarding admission, reenrollment, and continued enrollment in accordance with its mission, educational philosophy, and applicable law.</p>
+        <p style="font-weight: 700;">Enrollment for the 2026/2027 school year is full. We will consider 2027/2028 enrollment beginning in the Fall of 2026 and will update our website when enrollment interviews are opened.</p>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section section--blue">
+      <div class="wrap">
+        <div class="split">
+          <div>
+            <span class="eyebrow">Get in touch</span>
+            <h2>Questions about admissions?</h2>
+            <p>We're happy to answer questions. Reach out and someone will be in touch within two business days.</p>
+          </div>
+          <div class="split__panel">
+            <h3 class="mt-0">Send us a message</h3>
+            <form onsubmit="event.preventDefault(); this.reset(); document.getElementById('adm-thanks').hidden = false;">
+              <div class="stack">
+                <div>
+                  <label for="adm-name" style="display:block; font-weight:700; margin-bottom:0.3rem;">Your name</label>
+                  <input id="adm-name" name="name" type="text" required autocomplete="name"
+                    style="width:100%; padding:0.8rem 1rem; border:1px solid var(--line); border-radius:12px; font:inherit; background:#fff;" />
+                </div>
+                <div>
+                  <label for="adm-contact" style="display:block; font-weight:700; margin-bottom:0.3rem;">Email or phone</label>
+                  <input id="adm-contact" name="contact" type="text" required autocomplete="email"
+                    style="width:100%; padding:0.8rem 1rem; border:1px solid var(--line); border-radius:12px; font:inherit; background:#fff;" />
+                </div>
+                <div>
+                  <label for="adm-msg" style="display:block; font-weight:700; margin-bottom:0.3rem;">Message</label>
+                  <textarea id="adm-msg" name="message" rows="4"
+                    style="width:100%; padding:0.8rem 1rem; border:1px solid var(--line); border-radius:12px; font:inherit; background:#fff; resize:vertical;"></textarea>
+                </div>
+                <button type="submit" class="btn btn--warm btn--block btn--lg">Send message</button>
+                <p id="adm-thanks" hidden style="margin:0; color:var(--sage-dk); font-weight:800; text-align:center;">
+                  Thank you! We'll be in touch within two business days.
+                </p>
+                <p style="margin:0; font-size:0.85rem; color:var(--ink-soft); text-align:center;">
+                  This is a demo form. No information is sent or stored yet.
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="index.html" style="margin-bottom:0.8rem;">
+            <img src="logo.jpeg" alt="Roosevelt Academy — Roosevelt Hermit Crabs" style="height:52px; width:52px; object-fit:contain; border-radius:50%;" />
+            <span class="brand__name" style="color:#fff;">Roosevelt Academy<span></span></span>
+          </a>
+          <p>A nonprofit day school in Austin, Texas for students in grades 8 - 12 with disabilities and diverse learning needs.</p>
+        </div>
+        <div class="footer">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="who-we-are.html">Who We Are</a></li>
+            <li><a href="programs.html">Programs &amp; Services</a></li>
+            <li><a href="donate.html">Donate</a></li>
+          </ul>
+        </div>
+        <div class="footer">
+          <h4>Admissions</h4>
+          <ul>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="programs.html">Our programs</a></li>
+            <li><a href="who-we-are.html">Who we are</a></li>
+          </ul>
+        </div>
+        <div class="footer">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:RooseveltAcademyATX@gmail.com">RooseveltAcademyATX@gmail.com</a></li>
+            <li>5000 Marshall Ford Rd</li>
+            <li>Austin, TX 78732</li>
+            <li style="margin-top:0.6rem; display:flex; gap:0.8rem;">
+              <a href="https://www.facebook.com/people/Roosevelt-Academy/61590613000314/" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/rooseveltacademyatx" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Roosevelt Academy for Students with Disabilities. EIN 42-3199427.</span>
+        <span>Your privacy matters. We never sell or share family information.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -26,7 +26,7 @@
         <li><a href="who-we-are.html">Who We Are</a></li>
         <li><a href="programs.html">Programs &amp; Services</a></li>
         <li><a href="donate.html" aria-current="page">Donate</a></li>
-        <li class="nav__cta"><a class="btn btn--primary" href="programs.html#admissions">Schedule a Tour</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
       </ul>
     </nav>
   </header>
@@ -65,7 +65,28 @@
           <li>Small appliances</li>
         </ul>
         <p>If you believe you have items we could use, please let us know.</p>
-        <p style="margin-top:1.2rem;"><a class="btn btn--warm" href="programs.html#admissions">Contact Us</a></p>
+        <form style="margin-top:1.2rem;" onsubmit="event.preventDefault(); this.reset(); document.getElementById('donate-items-thanks').hidden = false;">
+          <div class="stack">
+            <div>
+              <label for="di-name" style="display:block; font-weight:700; margin-bottom:0.3rem;">Your name</label>
+              <input id="di-name" name="name" type="text" required autocomplete="name"
+                style="width:100%; padding:0.8rem 1rem; border:1px solid var(--line); border-radius:12px; font:inherit; background:#fff;" />
+            </div>
+            <div>
+              <label for="di-contact" style="display:block; font-weight:700; margin-bottom:0.3rem;">Email or phone</label>
+              <input id="di-contact" name="contact" type="text" required autocomplete="email"
+                style="width:100%; padding:0.8rem 1rem; border:1px solid var(--line); border-radius:12px; font:inherit; background:#fff;" />
+            </div>
+            <div>
+              <label for="di-msg" style="display:block; font-weight:700; margin-bottom:0.3rem;">Items to donate</label>
+              <textarea id="di-msg" name="message" rows="3" placeholder="Please share a little about the items you are able to donate."
+                style="width:100%; padding:0.8rem 1rem; border:1px solid var(--line); border-radius:12px; font:inherit; background:#fff; resize:vertical;"></textarea>
+            </div>
+            <button type="submit" class="btn btn--warm">Send</button>
+            <p id="donate-items-thanks" hidden style="margin:0; color:var(--sage-dk); font-weight:800;">Thank you! We'll be in touch soon.</p>
+            <p style="margin:0; font-size:0.85rem; color:var(--ink-soft);">This is a demo form. No information is sent or stored yet.</p>
+          </div>
+        </form>
       </div>
     </section>
 
@@ -77,7 +98,28 @@
         <p>Our students learn best through meaningful, real-world experiences, and our community plays an important role in making that possible. If you have a special skill, hobby, trade, or profession you'd be willing to share with our students, we'd love to hear from you!</p>
         <p>We also welcome connections with local businesses and organizations that may be interested in hosting class visits, offering behind-the-scenes tours, or providing opportunities for life-skills practice in real-world settings.</p>
         <p>If you have an idea, talent, or community connection you'd like to share, please contact us. We'd love to learn more about how we can partner together!</p>
-        <p style="margin-top:1.2rem;"><a class="btn btn--warm" href="programs.html#admissions">Get in Touch</a></p>
+        <form style="margin-top:1.2rem;" onsubmit="event.preventDefault(); this.reset(); document.getElementById('community-thanks').hidden = false;">
+          <div class="stack">
+            <div>
+              <label for="ci-name" style="display:block; font-weight:700; margin-bottom:0.3rem;">Your name</label>
+              <input id="ci-name" name="name" type="text" required autocomplete="name"
+                style="width:100%; padding:0.8rem 1rem; border:1px solid var(--line); border-radius:12px; font:inherit; background:#fff;" />
+            </div>
+            <div>
+              <label for="ci-contact" style="display:block; font-weight:700; margin-bottom:0.3rem;">Email or phone</label>
+              <input id="ci-contact" name="contact" type="text" required autocomplete="email"
+                style="width:100%; padding:0.8rem 1rem; border:1px solid var(--line); border-radius:12px; font:inherit; background:#fff;" />
+            </div>
+            <div>
+              <label for="ci-msg" style="display:block; font-weight:700; margin-bottom:0.3rem;">Tell us more</label>
+              <textarea id="ci-msg" name="message" rows="3" placeholder="Tell us about the skill, trade, or community connection you'd like to share."
+                style="width:100%; padding:0.8rem 1rem; border:1px solid var(--line); border-radius:12px; font:inherit; background:#fff; resize:vertical;"></textarea>
+            </div>
+            <button type="submit" class="btn btn--warm">Send</button>
+            <p id="community-thanks" hidden style="margin:0; color:var(--sage-dk); font-weight:800;">Thank you! We'd love to connect.</p>
+            <p style="margin:0; font-size:0.85rem; color:var(--ink-soft);">This is a demo form. No information is sent or stored yet.</p>
+          </div>
+        </form>
       </div>
     </section>
 
@@ -90,7 +132,28 @@
         <p>As a Corporate Sponsor, your organization will be recognized as a valued partner in our mission. We are proud to showcase our sponsors through our website, social media, school events, marketing materials, and our growing community of families, educators, supporters, and community partners. Together, we can create lasting opportunities for students while demonstrating your company's commitment to inclusion, education, and community impact.</p>
         <p>Many employers also offer charitable matching gift programs that can multiply the impact of employee donations. If your company participates in a matching gift program, we encourage you to explore how your support can make an even greater difference for Roosevelt Academy.</p>
         <p style="font-size:0.9rem; color:var(--ink-soft);">*Matching gifts will be available once Roosevelt Academy's nonprofit status is established and recognized by participating employers.</p>
-        <p style="margin-top:1.4rem;"><a class="btn btn--warm" href="programs.html#admissions">Partner With Us</a></p>
+        <form style="margin-top:1.4rem;" onsubmit="event.preventDefault(); this.reset(); document.getElementById('corporate-thanks').hidden = false;">
+          <div class="stack">
+            <div>
+              <label for="corp-name" style="display:block; font-weight:700; margin-bottom:0.3rem;">Your name</label>
+              <input id="corp-name" name="name" type="text" required autocomplete="name"
+                style="width:100%; padding:0.8rem 1rem; border:1px solid var(--line); border-radius:12px; font:inherit; background:#fff;" />
+            </div>
+            <div>
+              <label for="corp-contact" style="display:block; font-weight:700; margin-bottom:0.3rem;">Email or phone</label>
+              <input id="corp-contact" name="contact" type="text" required autocomplete="email"
+                style="width:100%; padding:0.8rem 1rem; border:1px solid var(--line); border-radius:12px; font:inherit; background:#fff;" />
+            </div>
+            <div>
+              <label for="corp-msg" style="display:block; font-weight:700; margin-bottom:0.3rem;">About your organization</label>
+              <textarea id="corp-msg" name="message" rows="3" placeholder="Tell us about your organization and how you'd like to partner with us."
+                style="width:100%; padding:0.8rem 1rem; border:1px solid var(--line); border-radius:12px; font:inherit; background:#fff; resize:vertical;"></textarea>
+            </div>
+            <button type="submit" class="btn btn--warm">Send</button>
+            <p id="corporate-thanks" hidden style="margin:0; color:var(--sage-dk); font-weight:800;">Thank you! We'll follow up soon.</p>
+            <p style="margin:0; font-size:0.85rem; color:var(--ink-soft);">This is a demo form. No information is sent or stored yet.</p>
+          </div>
+        </form>
       </div>
     </section>
 
@@ -151,19 +214,6 @@
       </div>
     </section>
 
-    <!-- ===== Closing CTA ===== -->
-    <section class="section section--blue">
-      <div class="wrap">
-        <div class="cta-band">
-          <h2>Somewhere, a child is waiting for their classroom.</h2>
-          <p>Your gift, whatever its size, helps them keep their seat. Thank you for believing they're worth it.</p>
-          <div class="hero__ctas" style="justify-content:center; margin-top:1.4rem; margin-bottom:0;">
-            <a class="btn btn--warm btn--lg" href="#top" onclick="window.scrollTo({top:0});">Give today</a>
-            <a class="btn btn--ghost btn--lg" href="programs.html">See the programs you'd fund</a>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
@@ -188,7 +238,7 @@
         <div class="footer">
           <h4>Admissions</h4>
           <ul>
-            <li><a href="programs.html#admissions">Schedule a tour</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
             <li><a href="programs.html">Our programs</a></li>
             <li><a href="who-we-are.html">Meet the team</a></li>
           </ul>

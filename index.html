@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Roosevelt Academy — A day school for students in grades 8 - 12 in Austin, TX</title>
-  <meta name="description" content="Roosevelt Academy is a nonprofit day school in Austin, Texas for students in grades 8 - 12 with disabilities and diverse learning needs. Individualized academics, life skills, vocational readiness, and on-site therapy." />
+  <meta name="description" content="A school built around the student: grades 8-12 in Austin, TX — Roosevelt Academy for Students with Disabilities." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
@@ -184,7 +184,7 @@ p { margin: 0 0 1.1em; }
 }
 .brand__name {
   font-family: var(--font-head);
-  font-weight: 600;
+  font-weight: 800;
   font-size: 1.25rem;
   color: var(--ink);
   line-height: 1.05;
@@ -237,12 +237,8 @@ p { margin: 0 0 1.1em; }
   max-width: 46ch;
   margin: 0 auto 1.8rem;
 }
-.hero__ctas { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-bottom: 1.3rem; justify-content: center; }
-.hero__assure {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  font-size: 0.95rem; color: var(--ink-soft); font-weight: 700;
-}
-.hero__assure svg { color: var(--sage-dk); flex: 0 0 auto; }
+.hero__logo-mark { display: flex; justify-content: center; margin-top: 2rem; }
+.hero__logo-mark img { width: 130px; height: 130px; border-radius: 50%; object-fit: contain; box-shadow: var(--shadow); }
 
 /* ---- Generic cards & grids ---- */
 .grid { display: grid; gap: 1.5rem; }
@@ -521,7 +517,7 @@ p { margin: 0 0 1.1em; }
         <li><a href="who-we-are.html">Who We Are</a></li>
         <li><a href="programs.html">Programs &amp; Services</a></li>
         <li><a href="donate.html">Donate</a></li>
-        <li class="nav__cta"><a class="btn btn--primary" href="programs.html#admissions">Schedule a Tour</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
       </ul>
     </nav>
   </header>
@@ -530,7 +526,7 @@ p { margin: 0 0 1.1em; }
     <!-- ===== Hero ===== -->
     <section class="hero">
       <div class="wrap hero__inner">
-        <span class="eyebrow">A day school in Austin · Grades 8 - 12</span>
+        <span class="eyebrow">A school built around the student: grades 8-12 in Austin, TX</span>
         <h1>A school built around how your student learns.</h1>
         <p class="hero__mission">
           Roosevelt Academy is a nonprofit day school in Austin for students with disabilities
@@ -538,14 +534,9 @@ p { margin: 0 0 1.1em; }
           vocational readiness, and on-site therapy, so each student is taught the way
           they learn best.
         </p>
-        <div class="hero__ctas">
-          <a class="btn btn--primary btn--lg" href="programs.html#admissions">Schedule a tour</a>
-          <a class="btn btn--ghost btn--lg" href="donate.html">Donate today</a>
+        <div class="hero__logo-mark">
+          <img src="logo.jpeg" alt="Roosevelt Academy seal" />
         </div>
-        <span class="hero__assure">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="M9 12l2 2 4-4"/></svg>
-          Now welcoming founding families for grades 8 - 12 in Austin.
-        </span>
       </div>
     </section>
 
