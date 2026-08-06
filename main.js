@@ -65,4 +65,32 @@
       );
     });
   }
+
+  /* Tap-to-copy Zelle ID */
+  var zelleCopyBtn = document.querySelector(".zelle-copy");
+  if (zelleCopyBtn) {
+    zelleCopyBtn.addEventListener("click", function () {
+      var value = zelleCopyBtn.getAttribute("data-copy") || "";
+      var confirmMsg = document.querySelector(".zelle-copy-confirm");
+      var showConfirm = function () {
+        if (!confirmMsg) return;
+        confirmMsg.hidden = false;
+        clearTimeout(zelleCopyBtn._confirmTimer);
+        zelleCopyBtn._confirmTimer = setTimeout(function () { confirmMsg.hidden = true; }, 2200);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(value).then(showConfirm);
+      } else {
+        var temp = document.createElement("textarea");
+        temp.value = value;
+        temp.style.position = "fixed";
+        temp.style.opacity = "0";
+        document.body.appendChild(temp);
+        temp.select();
+        try { document.execCommand("copy"); } catch (e) {}
+        document.body.removeChild(temp);
+        showConfirm();
+      }
+    });
+  }
 })();

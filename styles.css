@@ -433,6 +433,20 @@ p { margin: 0 0 1.1em; }
 .amount-picker button:hover { border-color: var(--harbor-blue); }
 .amount-picker button.is-active { background: var(--harbor-blue); border-color: var(--harbor-blue); color: #fff; }
 
+.zelle-copy {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: var(--font-body); font-weight: 800; font-size: 1.02rem;
+  color: var(--harbor-blue-dk);
+  background: var(--harbor-blue-lt);
+  border: 2px solid transparent;
+  border-radius: var(--radius-pill);
+  padding: 0.6rem 1.1rem;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.zelle-copy:hover, .zelle-copy:focus-visible { border-color: var(--harbor-blue); }
+.zelle-copy svg { flex: 0 0 auto; }
+
 .privacy-note {
   display: flex; gap: 0.7rem; align-items: flex-start;
   background: var(--sage-lt);
