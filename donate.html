@@ -111,37 +111,20 @@
             <span class="eyebrow">Financial support</span>
             <h2>Personal Financial Contributions</h2>
             <p>If you feel called to support our mission and are in a position to do so, we would be deeply grateful for your financial contribution. Every gift, regardless of size, helps us create a learning environment where students with diverse learning needs can discover their strengths, build independence, and prepare for meaningful futures.</p>
-            <p>Financial donations can be made using the form here.</p>
+            <p>The fastest way to give right now is Zelle — see the details here.</p>
           </div>
           <div class="split__panel">
-            <h3 class="mt-0">Make a gift</h3>
-            <p style="color:var(--ink-soft);">Choose an amount or enter your own. Every gift is tax-deductible.</p>
-
-            <div class="amount-picker" role="group" aria-label="Choose donation amount">
-              <button type="button" data-amount="50">$50</button>
-              <button type="button" data-amount="100" class="is-active">$100</button>
-              <button type="button" data-amount="250">$250</button>
-              <button type="button" data-amount="500">$500</button>
-              <button type="button" data-amount="1000">$1,000</button>
-            </div>
-
-            <label for="custom" style="display:block; font-weight:700; margin-bottom:0.3rem;">Or enter a custom amount</label>
-            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:1.2rem;">
-              <span style="font-weight:800; font-size:1.2rem; color:var(--ink-soft);">$</span>
-              <input id="custom" type="number" min="1" placeholder="Amount"
-                oninput="var v=this.value; if(v){document.getElementById('selected-amount').textContent=v; document.querySelectorAll('.amount-picker button').forEach(function(b){b.classList.remove('is-active');});}"
-                style="flex:1; padding:0.8rem 1rem; border:1px solid var(--line); border-radius:12px; font:inherit; background:#fff;" />
-            </div>
-
-            <p style="font-weight:700; margin-bottom:0.4rem;">You're giving: <span style="color:var(--harbor-blue-dk);">$<span id="selected-amount">100</span></span></p>
-
-            <button id="donate-action" type="button" class="btn btn--warm btn--block btn--lg">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-8-4.5-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.5-8 11-8 11Z"/></svg>
-              Donate now
-            </button>
-            <p style="margin-top:0.8rem; font-size:0.85rem; color:var(--ink-soft); text-align:center;">
-              Placeholder button. A secure payment processor (Stripe, PayPal Giving, etc.) will be connected here.
+            <h3 class="mt-0">Give via Zelle</h3>
+            <p style="color:var(--ink-soft);">Scan the code or send to the Zelle ID below. Please include your name so we can send a receipt.</p>
+            <img src="zelle-qr.gif" alt="Zelle QR code for Roosevelt Academy donations"
+              style="width:180px; height:180px; display:block; margin:0 auto 1rem; border:1px solid var(--line); border-radius:12px; padding:0.6rem; background:#fff;" />
+            <p style="text-align:center; font-weight:800; font-size:1.05rem; margin-bottom:1.4rem;">
+              Zelle ID: <span style="color:var(--harbor-blue-dk);">rooseveltacademyatx</span>
             </p>
+            <hr style="border:none; border-top:1px solid var(--line); margin:0 0 1.2rem;" />
+            <h3>Prefer to give by check?</h3>
+            <p style="color:var(--ink-soft); margin-bottom:0;">Make checks payable to <strong>Roosevelt Academy</strong> and mail to:</p>
+            <p style="font-weight:700; margin-bottom:0;">5000 Marshall Ford Rd<br />Austin, TX 78732</p>
           </div>
         </div>
       </div>
