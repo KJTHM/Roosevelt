@@ -459,7 +459,7 @@ p { margin: 0 0 1.1em; }
 .page-hero h1 { margin-bottom: 0.6rem; max-width: 28ch; margin-left: auto; margin-right: auto; }
 .page-hero p { max-width: min(60ch, 82%); margin-left: auto; margin-right: auto; }
 .page-hero__logo { display: flex; justify-content: center; margin-bottom: 1.4rem; }
-.page-hero__logo img { width: clamp(120px, 20vw, 170px); height: clamp(120px, 20vw, 170px); border-radius: 50%; object-fit: contain; box-shadow: var(--shadow); }
+.page-hero__logo img { width: clamp(360px, 60vw, 510px); height: clamp(360px, 60vw, 510px); border-radius: 50%; object-fit: contain; box-shadow: var(--shadow); }
 
 /* ---- CTA band ---- */
 .cta-band {
